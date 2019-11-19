@@ -1,3 +1,4 @@
+---
 galaxy_info:
   author: Isida Zyun'iti
   description: Telegraf role
@@ -6,4 +7,9 @@ galaxy_info:
   min_ansible_version: 2.9
   galaxy_tags:
     - telegraf
+  platforms:
+    - name: FreeBSD
+      versions:
+        - 12.1
+
 dependencies: []
