@@ -1,2 +1,5 @@
 ---
-# tasks file for .
+- name: Install telegraf
+  package:
+    name: telegraf
+    state: present
