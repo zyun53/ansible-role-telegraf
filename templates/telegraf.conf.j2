@@ -14,23 +14,11 @@
 
 [[outputs.influxdb]]
 
-[[inputs.cpu]]
-  percpu = true
-  totalcpu = true
-  collect_cpu_time = false
-  report_active = false
+{% for input in telegraf_inputs %}
 
-[[inputs.disk]]
-  ignore_fs = ["tmpfs", "devtmpfs", "devfs", "iso9660", "overlay", "aufs", "squashfs"]
+[[inputs.{{ input.name }}]
+{% for opt in input.opts %}
+{{ opt.key }} = {{ opt.value }}
+{% endfor %}
 
-[[inputs.diskio]]
-
-[[inputs.kernel]]
-
-[[inputs.mem]]
-
-[[inputs.processes]]
-
-[[inputs.swap]]
-
-[[inputs.system]]
+{% endfor %}

@@ -1,2 +1,28 @@
 ---
-# defaults file for .
+telegraf_inputs:
+  - name: cpu
+    opts:
+      - key: percpu
+        value: 'true'
+      - key: totalcpu
+        value: 'true'
+      - key: collect_cpu_time
+        value: 'false'
+      - key: report_active
+        value: 'false'
+  - name: disk
+    opts:
+      - key: ignore_fs
+        value: ["tmpfs", "devtmpfs", "devfs", "iso9660", "overlay", "aufs", "squashfs"]
+  - name: diskio
+    opts: []
+  - name: kernel
+    opts: []
+  - name: mem
+    opts: []
+  - name: processes
+    opts: []
+  - name: swap
+    opts: []
+  - name: system
+    opts: []
