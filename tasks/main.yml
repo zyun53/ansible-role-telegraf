@@ -1,5 +1,14 @@
 ---
+- name: Include OS-specific variables
+  include_vars: "{{ ansible_os_family }}.yml"
+
 - name: Install telegraf
   package:
     name: telegraf
     state: present
+
+- name: Template a file to telegraf.conf
+  template:
+    src: telegraf.conf.j2
+    dest: "{{ telegraf_conf_file }}"
+    mode: "0644"
