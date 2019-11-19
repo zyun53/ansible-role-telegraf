@@ -5,6 +5,9 @@ Ansible Role: Telegraf
 
 Telegraf role.
 
+* [GitHub](https://github.com/influxdata/telegraf)
+* [Docs](https://docs.influxdata.com/telegraf/)
+
 Requirements
 ------------
 
