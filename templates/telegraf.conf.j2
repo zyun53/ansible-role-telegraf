@@ -16,7 +16,7 @@
 
 {% for input in telegraf_inputs %}
 
-[[inputs.{{ input.name }}]
+[[inputs.{{ input.name }}]]
 {% for opt in input.opts %}
 {{ opt.key }} = {{ opt.value }}
 {% endfor %}
