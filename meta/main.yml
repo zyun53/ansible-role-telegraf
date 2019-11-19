@@ -3,8 +3,7 @@ galaxy_info:
   role_name: telegraf
   author: Isida Zyun'iti
   description: Telegraf role
-  license:
-    - BSD-3-Clause (default)
+  license: MIT
   min_ansible_version: 2.9
   galaxy_tags:
     - monitoring
