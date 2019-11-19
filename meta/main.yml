@@ -7,7 +7,9 @@ galaxy_info:
     - BSD-3-Clause (default)
   min_ansible_version: 2.9
   galaxy_tags:
+    - monitoring
     - telegraf
+    - influxdata
   platforms:
     - name: FreeBSD
       versions:
