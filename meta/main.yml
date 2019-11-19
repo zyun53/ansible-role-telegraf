@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: telegraf
   author: Isida Zyun'iti
   description: Telegraf role
   license:
