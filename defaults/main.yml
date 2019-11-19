@@ -1,4 +1,7 @@
 ---
+telegraf_state: started
+telegraf_enabled: true
+
 telegraf_inputs:
   - name: cpu
     opts:

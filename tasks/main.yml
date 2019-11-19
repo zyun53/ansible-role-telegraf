@@ -12,3 +12,9 @@
     src: telegraf.conf.j2
     dest: "{{ telegraf_conf_file }}"
     mode: "0644"
+
+- name: Start service telegraf
+  service:
+    name: telegraf
+    state: "{{ telegraf_state }}"
+    enabled: "{{ telegraf_enabled }}"
