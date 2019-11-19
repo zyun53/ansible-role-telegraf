@@ -1,6 +1,8 @@
 Ansible Role: Telegraf
 =========
 
+[![Build Status](https://github.com/zyun-i/ansible-role-telegraf/workflows/Lint/badge.svg)](https://github.com/zyun-i/ansible-role-telegraf/actions)
+
 Telegraf role.
 
 Requirements
