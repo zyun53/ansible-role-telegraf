@@ -1,6 +1,7 @@
 ---
 telegraf_state: started
 telegraf_enabled: true
+telegraf_url: https://repos.influxdata.com
 
 telegraf_inputs:
   - name: cpu

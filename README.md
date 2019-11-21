@@ -7,6 +7,7 @@ Telegraf role.
 
 * [GitHub](https://github.com/influxdata/telegraf)
 * [Docs](https://docs.influxdata.com/telegraf/)
+* [Telegraf 1.12 documentation | InfluxData Documentation](https://docs.influxdata.com/telegraf/v1.12/)
 
 Requirements
 ------------
