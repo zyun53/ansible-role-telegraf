@@ -1,14 +1,28 @@
 ---
+- name: Install any necessary dependencies.
+  apt:
+    name:
+      - python-httplib2
+      - python-apt
+      - curl
+      - apt-transport-https
+    state: present
+    update_cache: true
+    cache_valid_time: 3600
+
 - name: Import gpg signed key.
   apt_key:
     url: https://repos.influxdata.com/influxdb.key
     state: present
 
-- name: Add InfluxData repository
+- name: Add InfluxData repository.
   apt_repository:
-    repo: deb {{ telegraf_url }}/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable
+    repo: >
+      deb {{ telegraf_url }}/{{ ansible_distribution | lower }}
+      {{ ansible_distribution_release }}
+      stable
     state: present
 
-- name: Install Telegraf package
+- name: Install Telegraf package.
   apt:
     name: telegraf

@@ -17,7 +17,14 @@ telegraf_inputs:
   - name: disk
     opts:
       - key: ignore_fs
-        value: ["tmpfs", "devtmpfs", "devfs", "iso9660", "overlay", "aufs", "squashfs"]
+        value:
+          - tmpfs
+          - devtmpfs
+          - devfs
+          - iso9660
+          - overlay
+          - aufs
+          - squashfs
   - name: diskio
     opts: []
   - name: kernel
