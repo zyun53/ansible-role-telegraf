@@ -3,6 +3,17 @@ telegraf_state: started
 telegraf_enabled: true
 telegraf_url: https://repos.influxdata.com
 
+telegraf_agent_interval: 10s
+telegraf_agent_round_interval: "true"
+telegraf_agent_metric_batch_size: 1000
+telegraf_agent_metric_buffer_limit: 10000
+telegraf_agent_collection_jitter: 0s
+telegraf_agent_flush_interval: 10s
+telegraf_agent_flush_jitter: 0s
+telegraf_agent_precision: ""
+telegraf_agent_hostname: ""
+telegraf_agent_omit_hostname: "false"
+
 telegraf_inputs:
   - name: cpu
     opts:

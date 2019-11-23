@@ -1,16 +1,16 @@
 [global_tags]
 
 [agent]
-  interval = "10s"
-  round_interval = true
-  metric_batch_size = 1000
-  metric_buffer_limit = 10000
-  collection_jitter = "0s"
-  flush_interval = "10s"
-  flush_jitter = "0s"
-  precision = ""
-  hostname = ""
-  omit_hostname = false
+  interval = "{{ telegraf_agent_interval }}"
+  round_interval = {{ telegraf_agent_round_interval }}
+  metric_batch_size = {{ telegraf_agent_metric_batch_size }}
+  metric_buffer_limit = {{ telegraf_agent_metric_buffer_limit }}
+  collection_jitter = "{{ telegraf_agent_collection_jitter }}"
+  flush_interval = "{{ telegraf_agent_flush_interval }}"
+  flush_jitter = "{{ telegraf_agent_flush_jitter }}"
+  precision = "{{ telegraf_agent_precision }}"
+  hostname = "{{ telegraf_agent_hostname }}"
+  omit_hostname = {{ telegraf_agent_omit_hostname }}
 
 [[outputs.influxdb]]
 

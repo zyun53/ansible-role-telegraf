@@ -1,0 +1,21 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+lint:
+  name: yamllint
+  options:
+    config-file: molecule/default/yaml-lint.yml
+platforms:
+  - name: hoge
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: bsd
+verifier:
+  name: testinfra
+  lint:
+    name: flake8
