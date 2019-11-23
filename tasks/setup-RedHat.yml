@@ -1,0 +1,16 @@
+---
+- name: Install any necessary dependencies
+  yum:
+    name: curl
+    state: present
+
+- name: Add InfluxData repository file
+  copy:
+    src: influxdb.repo
+    dest: /etc/yum.repos.d/influxdb.repo
+
+- name: Install Telegraf packages
+  yum:
+    name: telegraf
+    state: present
+    update_cache: true

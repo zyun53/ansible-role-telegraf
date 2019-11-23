@@ -1,0 +1,23 @@
+---
+- name: Install any necessary dependencies.
+  apt:
+    name:
+      - apt-transport-https
+    state: present
+
+- name: Import gpg signed key.
+  apt_key:
+    url: https://repos.influxdata.com/influxdb.key
+    state: present
+
+- name: Add InfluxData repository.
+  apt_repository:
+    repo: >
+      deb {{ telegraf_url }}/debian
+      {{ ansible_distribution_release }}
+      stable
+    state: present
+
+- name: Install Telegraf package.
+  apt:
+    name: telegraf

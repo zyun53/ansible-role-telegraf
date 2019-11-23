@@ -8,8 +8,19 @@ lint:
   options:
     config-file: molecule/default/yaml-lint.yml
 platforms:
-  - name: instance
+  - name: instance-ubuntu1804
+    image: ubuntu:18.04
+  - name: instance-ubuntu1604
     image: ubuntu:16.04
+  - name: instance-centos7
+    image: centos:7
+  - name: instance-debian9
+    image: geerlingguy/docker-debian9-ansible
+    command: ${MOLECULE_DOCKER_COMMAND:-""}
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+    pre_build_image: true
 provisioner:
   name: ansible
   lint:

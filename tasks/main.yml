@@ -2,9 +2,20 @@
 - name: Include OS-specific variables
   include_vars: "{{ ansible_os_family }}.yml"
 
-- name: Include install tasks.
-  include: "install-{{ ansible_os_family }}.yml"
+# Setup/install tasks.
+- include_tasks: setup-RedHat.yml
+  when: ansible_os_family == 'RedHat'
 
+- include_tasks: setup-Debian.yml
+  when: ansible_os_family == 'Debian' and ansible_distribution != 'Ubuntu'
+
+- include_tasks: setup-Ubuntu.yml
+  when: ansible_distribution == 'Ubuntu'
+
+- include_tasks: setup-FreeBSD.yml
+  when: ansible_os_family == 'FreeBSD'
+
+# Configuration tasks.
 - name: Template a file to telegraf.conf
   template:
     src: telegraf.conf.j2
