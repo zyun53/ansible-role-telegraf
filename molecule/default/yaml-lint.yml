@@ -1,7 +1,7 @@
 ---
 extends: default
 ignore: |
-  lint.yml
+  **/.github/workflows/*.yml
 rules:
   line-length:
     max: 200
