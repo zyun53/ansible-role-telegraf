@@ -12,6 +12,19 @@ galaxy_info:
   platforms:
     - name: FreeBSD
       versions:
+        - 12.1
         - 12.0
+        - 11.3
+    - name: EL
+      versions:
+        - 7
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
 
 dependencies: []
